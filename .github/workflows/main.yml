@@ -29,7 +29,13 @@ jobs:
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
           REMOTE_PORT: ${{ secrets.REMOTE_PORT }}
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
-          SCRIPT_BEFORE: ls
           ARGS: "-rltgoDzvO"
           EXCLUDE: "/.git/, /.github/, /.hygen/, /node_modules/"
+          SCRIPT_BEFORE: |
+            whoami
+            ls -al
+          SCRIPT_AFTER: |
+            whoami
+            ls -al
+            echo $RSYNC_STDOUT
           TARGET: public_html/wp-content/themes/tailpress-master
