@@ -1,25 +1,27 @@
 <div id="container" class="w-auto flex flex-col md:flex-row px-4 sm:px-8 md:px-24 lg:px-24 xl:px-24 relative">
     <div class="mr-10">
         <img class="rounded-lg min-w-[100px] w-full h-auto md:w-auto md:h-auto"
-            src="https://ucarecdn.com/833d0fe1-c3b5-4843-b62c-fed9467aceeb/imageOfMyself.jpeg" alt="image of myself" />
+            src="./photos/head-shot.jpg" alt="image of myself" />
     </div>
     <div class="w-full sm:w-[70%] md:w-[60%] lg:w-[50%]">
         <h1 class="text-white font-bold text-3xl mt-6 mb-8">
-            Hey it's me, John Doe
+            Hey it's me, Restria Hertomo
         </h1>
 
         <p class="text-white w-full sm:w-[35rem] md:w-[30rem] lg:w-[25rem] mb-10">
-            I'm Aydin, a 18-year-old high schooler with a passion for web
-            development. My tech journey started with HTML, CSS, and JavaScript,
-            and I was hooked by the thrill of crafting dynamic, interactive
-            websites. As I grew, Node.js and ReactJS became my go-to tools for
-            building scalable applications. Feel free
-            to connect if you have questions, collaboration ideas, or just want to
-            discuss the latest in web development!
+            I'm Tria, a data engineer with a passion for data and automation. 
+            My journey began in data science, and over the years, I’ve worked 
+            on building scalable data pipelines in the fintech industry. 
+            I thrive on solving complex data challenges and optimizing workflows 
+            to make data more accessible and actionable. 
+            Beyond work, I enjoy a colorful life filled with woodworking, cooking, 
+            and traveling—exploring creativity both in and out of tech. 
+            
+            Thanks for stopping by! Feel free to explore and connect. 🚀
         </p>
 
         <div id="social" class="flex flex-wrap justify-start items-center gap-4">
-            <a rel="noopener" target="_blank" href="https://github.com/rodgtr1"
+            <a rel="noopener" target="_blank" href="https://github.com/triatomo"
                 class="bg-gray-800 rounded-lg p-5 w-64 flex items-center gap-2 text-white">
                 <svg width="20px" height="20px" viewBox="0 0 120 99" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -73,7 +75,7 @@
                 </svg>
                 <span>View my work</span>
             </a>
-            <a rel="noopener" target="_blank" href="https://www.linkedin.com/in/travisdotmedia/"
+            <a rel="noopener" target="_blank" href="https://www.linkedin.com/in/restria-hertomo-55286b123/"
                 class="bg-gray-800 rounded-lg p-5 w-64 flex items-center gap-2 text-white">
                 <svg height="20px" viewBox="0 0 72 72" width="20px" xmlns="http://www.w3.org/2000/svg">
                     <g fill="none" fill-rule="evenodd">
@@ -87,14 +89,14 @@
                 </svg>
                 <span>Follow me on Linkedin</span>
             </a>
-            <a rel="noopener" target="_blank" href="https://twitter.com/travisdotmedia"
+            <a rel="noopener" target="_blank" href="https://x.com/triatomo1"
                 class="bg-gray-800 rounded-lg p-5 w-64 flex items-center gap-2 text-white">
                 <svg width="20px" height="20px" xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
                     viewBox="0 0 248 204">
                     <path fill="#1d9bf0"
                         d="M221.95 51.29c.15 2.17.15 4.34.15 6.53 0 66.73-50.8 143.69-143.69 143.69v-.04c-27.44.04-54.31-7.82-77.41-22.64 3.99.48 8 .72 12.02.73 22.74.02 44.83-7.61 62.72-21.66-21.61-.41-40.56-14.5-47.18-35.07 7.57 1.46 15.37 1.16 22.8-.87-23.56-4.76-40.51-25.46-40.51-49.5v-.64c7.02 3.91 14.88 6.08 22.92 6.32C11.58 63.31 4.74 33.79 18.14 10.71c25.64 31.55 63.47 50.73 104.08 52.76-4.07-17.54 1.49-35.92 14.61-48.25 20.34-19.12 52.33-18.14 71.45 2.19 11.31-2.23 22.15-6.38 32.07-12.26-3.77 11.69-11.66 21.62-22.2 27.93 10.01-1.18 19.79-3.86 29-7.95-6.78 10.16-15.32 19.01-25.2 26.16z" />
                 </svg>
-                <span>Follow me on Twitter</span>
+                <span>Follow me on X</span>
             </a>
         </div>
 
