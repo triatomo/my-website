@@ -23,7 +23,7 @@ jobs:
       # - name: Run build task
       #   run: npm run production
       - name: Test SSH Connection
-        run: ssh -v ${{ secrets.REMOTE_USER }}@${{ secrets.REMOTE_HOST }} "echo 'SSH Connection Successful'"
+        run: ssh -v -p 65002 ${{ secrets.REMOTE_USER }}@${{ secrets.REMOTE_HOST }} "echo 'SSH Connection Successful'"
       - name: Setup SSH Key
         run: |
           mkdir -p ~/.ssh
