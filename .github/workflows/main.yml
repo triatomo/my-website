@@ -22,8 +22,6 @@ jobs:
       #   run: npm install
       # - name: Run build task
       #   run: npm run production
-      - name: Test SSH Connection
-        run: ssh -v -p 65002 ${{ secrets.REMOTE_USER }}@${{ secrets.REMOTE_HOST }} "echo 'SSH Connection Successful'"
       - name: Setup SSH Key
         run: |
           mkdir -p ~/.ssh
@@ -32,6 +30,8 @@ jobs:
           echo "Host your-server-ip" >> ~/.ssh/config
           echo "  IdentityFile ~/.ssh/hostinger" >> ~/.ssh/config
           echo "  IdentitiesOnly yes" >> ~/.ssh/config
+      - name: Test SSH Connection
+        run: ssh -v -p 65002 ${{ secrets.REMOTE_USER }}@${{ secrets.REMOTE_HOST }} "echo 'SSH Connection Successful'"
       - name: Remove ED25519 Key (if exists)
         run: ssh-add -d ~/.ssh/id_ed25519 || true
       - name: Delete Known Hosts (if exists)
