@@ -22,13 +22,15 @@ jobs:
       #   run: npm install
       # - name: Run build task
       #   run: npm run production
+      - name: Test SSH Connection
+        run: ssh -v ${{ secrets.REMOTE_USER }}@${{ secrets.REMOTE_HOST }} "echo 'SSH Connection Successful'"
       - name: Setup SSH Key
         run: |
           mkdir -p ~/.ssh
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/hostinger
+          chmod 600 ~/.ssh/hostinger
           echo "Host your-server-ip" >> ~/.ssh/config
-          echo "  IdentityFile ~/.ssh/id_rsa" >> ~/.ssh/config
+          echo "  IdentityFile ~/.ssh/hostinger" >> ~/.ssh/config
           echo "  IdentitiesOnly yes" >> ~/.ssh/config
       - name: Remove ED25519 Key (if exists)
         run: ssh-add -d ~/.ssh/id_ed25519 || true
