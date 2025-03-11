@@ -14,26 +14,26 @@ jobs:
       - uses: "shivammathur/setup-php@v2"
         with:
           php-version: "8.2"
-      # - name: Install Node.js
-      #   uses: actions/setup-node@v3
-      #   with:
-      #     node-version: "16.x"
-      # - name: Install npm dependencies
-      #   run: npm install
-      # - name: Run build task
-      #   run: npm run productio
-      - name: Setup SSH Key
-        run: |
-          mkdir -p ~/.ssh
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/hostinger
-          chmod 600 ~/.ssh/hostinger
-          echo "Host ${{ secrets.REMOTE_HOST }}" >> ~/.ssh/config
-          echo "  IdentityFile ~/.ssh/hostinger" >> ~/.ssh/config
-          echo "  IdentitiesOnly yes" >> ~/.ssh/config
-          echo "  StrictHostKeyChecking no" >> ~/.ssh/config
-          echo "  UserKnownHostsFile=/dev/null" >> ~/.ssh/config
-      - name: Test SSH Connection
-        run: ssh -v -p 65002 ${{ secrets.REMOTE_USER }}@${{ secrets.REMOTE_HOST }} "echo 'SSH Connection Successful'"
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "16.x"
+      - name: Install npm dependencies
+        run: npm install
+      - name: Run build task
+        run: npm run production
+      # - name: Setup SSH Key
+      #   run: |
+      #     mkdir -p ~/.ssh
+      #     echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/hostinger
+      #     chmod 600 ~/.ssh/hostinger
+      #     echo "Host ${{ secrets.REMOTE_HOST }}" >> ~/.ssh/config
+      #     echo "  IdentityFile ~/.ssh/hostinger" >> ~/.ssh/config
+      #     echo "  IdentitiesOnly yes" >> ~/.ssh/config
+      #     echo "  StrictHostKeyChecking no" >> ~/.ssh/config
+      #     echo "  UserKnownHostsFile=/dev/null" >> ~/.ssh/config
+      # - name: Test SSH Connection
+      #   run: ssh -v -p 65002 ${{ secrets.REMOTE_USER }}@${{ secrets.REMOTE_HOST }} "echo 'SSH Connection Successful'"
       - name: Deploy to Server
         uses: easingthemes/ssh-deploy@main
         env:
