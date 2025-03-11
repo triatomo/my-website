@@ -27,7 +27,7 @@ jobs:
           mkdir -p ~/.ssh
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/hostinger
           chmod 600 ~/.ssh/hostinger
-          echo "Host ${{ secrets.REMOTE_HOST }} >> ~/.ssh/config
+          echo "Host ${{ secrets.REMOTE_HOST }}" >> ~/.ssh/config
           echo "  IdentityFile ~/.ssh/hostinger" >> ~/.ssh/config
           echo "  IdentitiesOnly yes" >> ~/.ssh/config
           echo "  StrictHostKeyChecking no" >> ~/.ssh/config
