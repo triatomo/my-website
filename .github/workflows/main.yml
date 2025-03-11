@@ -22,8 +22,10 @@ jobs:
       #   run: npm install
       # - name: Run build task
       #   run: npm run production
-      - name: Add Server to Known Hosts
-        run: ssh-keyscan -H ${{ secrets.REMOTE_HOST }} >> ~/.ssh/known_hosts
+      - name: Delete Known Hosts (if exists)
+        run: |
+          rm -f ~/.ssh/known_hosts
+          touch ~/.ssh/known_hosts
       - name: Setup SSH Key
         run: |
           mkdir -p ~/.ssh
@@ -34,12 +36,6 @@ jobs:
           echo "  IdentitiesOnly yes" >> ~/.ssh/config
       - name: Test SSH Connection
         run: ssh -v -p 65002 ${{ secrets.REMOTE_USER }}@${{ secrets.REMOTE_HOST }} "echo 'SSH Connection Successful'"
-      - name: Remove ED25519 Key (if exists)
-        run: ssh-add -d ~/.ssh/id_ed25519 || true
-      - name: Delete Known Hosts (if exists)
-        run: |
-          rm -f ~/.ssh/known_hosts
-          touch ~/.ssh/known_hosts
       - name: Deploy to Server
         uses: easingthemes/ssh-deploy@main
         env:
