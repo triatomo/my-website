@@ -27,9 +27,11 @@ jobs:
           mkdir -p ~/.ssh
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/hostinger
           chmod 600 ~/.ssh/hostinger
-          echo "Host your-server-ip" >> ~/.ssh/config
+          echo "Host ${{ secrets.REMOTE_HOST }} >> ~/.ssh/config
           echo "  IdentityFile ~/.ssh/hostinger" >> ~/.ssh/config
           echo "  IdentitiesOnly yes" >> ~/.ssh/config
+          echo "  StrictHostKeyChecking no" >> ~/.ssh/config
+          echo "  UserKnownHostsFile=/dev/null" >> ~/.ssh/config
       - name: Test SSH Connection
         run: ssh -v -p 65002 ${{ secrets.REMOTE_USER }}@${{ secrets.REMOTE_HOST }} "echo 'SSH Connection Successful'"
       - name: Deploy to Server
