@@ -43,7 +43,6 @@ jobs:
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
           REMOTE_PORT: ${{ secrets.REMOTE_PORT }}
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
-          SCRIPT_BEFORE: ls
           ARGS: "-avz --delete"
           EXCLUDE: "/.git/, /.github/, /.hygen/, /node_modules/"
           TARGET: public_html/wp-content/themes/tailpress-master
