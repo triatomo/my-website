@@ -1,4 +1,4 @@
-name: Webhostmost SSH Deployment
+name: Hostinger SSH Deployment
 on:
   push:
     branches: [main]
@@ -22,8 +22,6 @@ jobs:
         run: npm install
       - name: Run build task
         run: npm run production
-      - name: Test SSH Connection
-        run: ssh -o StrictHostKeyChecking=no ${{ secrets.REMOTE_USER }}@${{ secrets.REMOTE_HOST }} "echo 'SSH Connection Successful'"
       - name: Deploy to Server
         uses: easingthemes/ssh-deploy@main
         env:
@@ -33,11 +31,4 @@ jobs:
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
           ARGS: "-rltgoDzvO"
           EXCLUDE: "/.git/, /.github/, /.hygen/, /node_modules/"
-          SCRIPT_BEFORE: |
-            whoami
-            ls -al
-          SCRIPT_AFTER: |
-            whoami
-            ls -al
-            echo $RSYNC_STDOUT
           TARGET: public_html/wp-content/themes/tailpress-master
