@@ -1,7 +1,7 @@
 <div id="container" class="w-auto flex flex-col md:flex-row px-4 sm:px-8 md:px-24 lg:px-24 xl:px-24 relative">
     <div class="mr-10">
         <img class="rounded-lg min-w-[100px] w-full h-auto md:w-auto md:h-auto"
-            src="./photos/head-shot.jpg" alt="image of myself" />
+            src="../photos/head-shot.jpg" alt="image of myself" />
     </div>
     <div class="w-full sm:w-[70%] md:w-[60%] lg:w-[50%]">
         <h1 class="text-white font-bold text-3xl mt-6 mb-8">
@@ -13,10 +13,9 @@
             My journey began in data science, and over the years, I’ve worked 
             on building scalable data pipelines in the fintech industry. 
             I thrive on solving complex data challenges and optimizing workflows 
-            to make data more accessible and actionable. 
+            to make data more accessible and actionable.<br> 
             Beyond work, I enjoy a colorful life filled with woodworking, cooking, 
-            and traveling—exploring creativity both in and out of tech. 
-            
+            and traveling—exploring creativity both in and out of tech.<br><br>
             Thanks for stopping by! Feel free to explore and connect. 🚀
         </p>
 
