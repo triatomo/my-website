@@ -1,7 +1,7 @@
 <div id="container" class="w-auto flex flex-col md:flex-row px-4 sm:px-8 md:px-24 lg:px-24 xl:px-24 relative">
     <div class="mr-10">
         <img class="rounded-lg min-w-[100px] w-full h-auto md:w-auto md:h-auto"
-            src="../photos/head-shot.jpg" alt="image of myself" />
+            src="https://triahertomo.me/wp-content/uploads/2025/03/head-shot-scaled.jpg" alt="image of myself" />
     </div>
     <div class="w-full sm:w-[70%] md:w-[60%] lg:w-[50%]">
         <h1 class="text-white font-bold text-3xl mt-6 mb-8">
